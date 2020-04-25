@@ -99,12 +99,24 @@ body {
 }
 
 .screen {
+    display: flex;
     width: 100%;
     height: 70px;
     background-color: #fff;
     margin: 15px 0;
     transform: rotateX(-45deg);
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+    transition: background-color 300ms, color 300ms;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.screen:hover {
+    background-color: #feffb8;
+    box-shadow: 0 3px 10px #feffb8b3;
+    color:black;
 }
 
 p.text {

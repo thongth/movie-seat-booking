@@ -1,8 +1,9 @@
 const movie = document.querySelector('#movie');
-const seats = document.querySelectorAll('.seat');
+const seats = document.querySelectorAll('.row .seat');
 const totalSelectedSeats = document.getElementById('count');
 const totalPrice = document.getElementById('total');
 const container = document.querySelector('.container');
+const screen = document.querySelector('.screen');
 
 let moviePrice = +movie.value;
 
@@ -52,5 +53,17 @@ container.addEventListener('click', e => {
         updateSelectedCount();
     }
 });
+
+screen.addEventListener('click', e => {
+    seats.forEach( seat => {
+        if(seat.classList.contains('selected')){
+            seat.classList.remove('selected');
+        }
+    });
+    localStorage.setItem('selectedSeats', JSON.stringify([]));
+    localStorage.setItem('selectedMoviePrice', 0);
+    populateUI();
+    updateSelectedCount();
+})
 
 updateSelectedCount();
