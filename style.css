@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -13,6 +14,11 @@ body {
     height: 100vh;
     background-color: #232333;
     color: #fff;
+}
+
+.header {
+    font-family: 'Dancing Script', cursive;
+    cursor: default;
 }
 
 .movie-container #movie {
